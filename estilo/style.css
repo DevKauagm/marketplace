@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+J:ital,wght@0,100..400;1,100..400&display=swap');
+
+:root {
+    --cor1: #FAD21E;
+    --cor2: #FA9C1E;
+    --cor3: #FAB71E;
+    --cor4: #FADF61;
+    --cor5: #CEFA1E;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--cor3);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    font-family: "Playwrite GB J", cursive;
+    background-image: linear-gradient(to top, var(--cor1), var(--cor2));
+    padding: 20px;
+}
+
+header > h1 {
+    margin-right: 20px;
+}
+
+header > p {
+    margin-left: 20px;
+}
+
+header > input {
+    flex: auto;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--cor5);
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+    background-color: var(--cor4);
+}
+
+#geladeiras {
+    margin: 0;
+    padding: 10px;
+    background-color: white;
+}
+
+#geladeiras > img {
+    width: 200px;
+}

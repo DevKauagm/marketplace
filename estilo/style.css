@@ -49,12 +49,18 @@ section {
     background-color: var(--cor4);
 }
 
-#geladeiras {
-    margin: 0;
-    padding: 10px;
-    background-color: white;
+img {
+    width: 200px;
 }
 
-#geladeiras > img {
-    width: 200px;
+#pgproduto {
+    grid-template: repeat(3, 200px) / 1fr 2fr 1fr;
+    align-items: center;
+    gap: 20px;
+    grid-auto-flow: column;
+}
+
+#pgproduto > #principal {
+    grid-area: 1 / 2 / -1 / -2;
+    width: 80%;
 }

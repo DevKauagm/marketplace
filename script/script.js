@@ -6,17 +6,6 @@ const section_eletro = document.querySelectorAll('#eletrodomesticos > section')
 
 const img = document.querySelectorAll('main > img')
 
-function info(nome, pr, imgs) {
-    document.querySelector('main').style.display = 'none'
-    document.body.style.backgroundColor = 'white'
-    document.querySelector('#pgproduto').style.display = 'grid'
-    for (let i = 0; i <= 3; i++) {
-        img[i].src = imgs[i]
-    }
-    document.querySelector('#pgproduto > h1').innerText = nome
-    document.querySelector('#pgproduto > h2').innerText = `R$ ${pr}`
-}
-
 for (const geladeira of produtos.eletrodom.geladeira) {
     const img = document.createElement('img')
     img.setAttribute('src', geladeira.imgs[0])

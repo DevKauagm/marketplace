@@ -6,7 +6,7 @@ const section_eletro = document.querySelectorAll('#eletrodomesticos > section')
 
 const img = document.querySelectorAll('main > img')
 
-function fotos (nome, pr, imgs) {
+function info(nome, pr, imgs) {
     document.querySelector('main').style.display = 'none'
     document.body.style.backgroundColor = 'white'
     document.querySelector('#pgproduto').style.display = 'grid'
@@ -17,9 +17,9 @@ function fotos (nome, pr, imgs) {
     document.querySelector('#pgproduto > h2').innerText = `R$ ${pr}`
 }
 
-for (let i in produtos.eletrodom.geladeira) {
+for (const geladeira of produtos.eletrodom.geladeira) {
     const img = document.createElement('img')
-    img.setAttribute('src', produtos.eletrodom.geladeira[i].imgs[0])
+    img.setAttribute('src', geladeira.imgs[0])
     section_eletro[0].appendChild(img)
-    img.addEventListener('click', () => fotos(produtos.eletrodom.geladeira[i].nome, produtos.eletrodom.geladeira[i].pr, produtos.eletrodom.geladeira[i].imgs))
+    img.addEventListener('click', () => info(geladeira.nome, geladeira.pr, geladeira.imgs))
 }

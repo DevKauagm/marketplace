@@ -3,9 +3,9 @@ const produtos = {
 }
 
 const section_eletro = document.querySelectorAll('#eletrodomesticos > a')
-const img = document.createElement('img')
 
 for (const geladeira of produtos.eletrodom.geladeira) {
+    const img = document.createElement('img')
     img.setAttribute('src', geladeira.imgs[0])
     section_eletro[0].appendChild(img)
     img.addEventListener('click', () => {localStorage.setItem('info', JSON.stringify(geladeira))})

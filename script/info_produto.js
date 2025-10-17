@@ -11,7 +11,7 @@ function img_principal(img) {
 }
 
 for (let i = 0; i <= 3; i++) {
-    imgs[i].src = info.imgs[i]
+    imgs[i].src = `../${info.imgs[i]}`
     imgs[i].addEventListener('click', () => img_principal(imgs[i]))
     h1.innerText = info.nome
     h2.innerText = `R$${info.pr}`

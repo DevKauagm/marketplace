@@ -19,7 +19,20 @@ function verificar() {
 }
 
 function cadastrar() {
-    console.log(verificar())
+    if (verificar()) {
+        if (localStorage.getItem('cadastros') == null) {
+            localStorage.setItem('cadastros', JSON.stringify([]))
+        }
+        const cadastros = JSON.parse(localStorage.getItem('cadastros'))
+        const dados = {
+            usuario: inputs[0],
+            email: inputs[1],
+            senha: inputs[2],
+            cpf: inputs[3]
+        }
+        localStorage.setItem('cadastros', JSON.stringify(cadastros.append(dados)))
+        console.log(cadastro)
+    }
 }
 
 document.querySelector('section > input').addEventListener('click', cadastrar)

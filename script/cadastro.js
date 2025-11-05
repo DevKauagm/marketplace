@@ -25,13 +25,15 @@ function cadastrar() {
         }
         const cadastros = JSON.parse(localStorage.getItem('cadastros'))
         const dados = {
-            usuario: inputs[0],
-            email: inputs[1],
-            senha: inputs[2],
-            cpf: inputs[3]
+            usuario: inputs[0].value,
+            email: inputs[1].value,
+            senha: inputs[2].value,
+            cpf: inputs[3].value
         }
-        localStorage.setItem('cadastros', JSON.stringify(cadastros.append(dados)))
-        console.log(cadastro)
+        console.log(dados)
+        console.log(cadastros)
+        localStorage.setItem('cadastros', JSON.stringify(cadastros.push(dados)))
+        console.log(cadastros)
     }
 }
 
